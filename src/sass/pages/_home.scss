@@ -1,0 +1,58 @@
+.review-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  flex-flow: column;
+
+  .review__content {
+    text-align: center;
+    width: 50%;
+    justify-self: center;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 3px;
+    padding: 6rem;
+   
+  }
+}
+
+//Services 
+
+// Services section
+.services-section {
+  background: url("../images/plane.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+
+  .services-group {
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-evenly;
+    
+
+    @include respond(phone) {
+      flex-flow: column;
+    }
+  }
+
+  .service {
+    
+    width: 30rem;
+    padding: 2rem;
+    margin: 1.5rem;
+    background: rgba(255, 255, 255, .5);
+
+    @include respond(phone) {
+      align-self: center;
+      width: 90%;
+    }
+  }
+}

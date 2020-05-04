@@ -102,7 +102,7 @@ const SliderCSS = css`
   position: relative;
   height: 100vh;
   width: 100vw;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
 `
 export default Slider

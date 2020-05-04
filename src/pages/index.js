@@ -1,7 +1,12 @@
 import React from "react";
+import Navigation from '../components/Navigation';
 import Slider from '../components/Slider/Slider';
-
-import Layout from "../components/layout"
+import Destinations from '../components/Destinations';
+import Reviews from '../components/ReviewSection';
+import FeaturedPosts from '../components/FeaturedPosts';
+import Services from '../components/Services';
+import SubscribeSection from '../components/SubscribeSection';
+import Footer from '../components/Footer';
 
 const images = [
   'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
@@ -11,9 +16,16 @@ const images = [
 ]
 
 const IndexPage = () => (
-  <Layout>
-    <Slider slides={images} autoPlay={3} />
-  </Layout>
+  <>
+    <Navigation />
+    <Slider slides={images} autoPlay={3}  />
+    <Destinations />
+    <Reviews />
+    <FeaturedPosts />
+    <Services />
+    <SubscribeSection />
+    <Footer />
+  </>
 )
 
 export default IndexPage
