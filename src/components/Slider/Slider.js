@@ -71,6 +71,9 @@ const Slider = props => {
   
   return (
     <div css={SliderCSS}>
+      <div css={HeaderCSS}>
+        <h1 css={HeadingCSS}>Dream. Discover. Inspire.</h1>
+      </div>
       <SliderContent
         translate={translate}
         transition={transition}
@@ -105,4 +108,27 @@ const SliderCSS = css`
   margin: 0;
   overflow: hidden;
 `
+
+const HeaderCSS = css`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, .3);
+  height: 100%;
+  width: 100%;
+`
+const HeadingCSS = css`
+color: #fff;
+font-size: 4.5rem;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: .5rem;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
+
 export default Slider

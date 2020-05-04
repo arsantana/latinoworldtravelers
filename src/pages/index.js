@@ -18,7 +18,7 @@ const images = [
 const IndexPage = () => (
   <>
     <Navigation />
-    <Slider slides={images} autoPlay={3}  />
+    <Slider slides={images} autoPlay={5}  />
     <Destinations />
     <Reviews />
     <FeaturedPosts />

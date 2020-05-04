@@ -5,12 +5,13 @@ import { css, jsx } from '@emotion/core'
 const Dot = ({ active }) => (
   <span
     css={css`
-      padding: 8px;
+      padding: .6rem;
       margin-right: 5px;
       cursor: pointer;
       border-radius: 50%;
       opacity: .5;
       background: ${active ? 'black' : 'white'};
+      z-index: 2000;
     `}
   />
 )
