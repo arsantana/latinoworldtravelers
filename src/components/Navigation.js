@@ -9,15 +9,15 @@ const Navigation = () => {
   <Navbar.Brand href="/">
     <img
         src={logo}
-        width="150"
+        width="160"
         height="auto"
         className="d-inline-block align-top"
         alt="Latino World Travelers logo"
       />
   </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="ml-auto">
       <Nav.Link><Link to='/'>Home</Link></Nav.Link>
       <Nav.Link><Link to='/about'>About</Link></Nav.Link>
       <Nav.Link><Link to='/services'>Services</Link></Nav.Link>

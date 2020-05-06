@@ -1,9 +1,11 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const Services = () => (
   <div className="services-section">
-    <div className="services-group">
-      <h1 className="heading-secondary">
+    <div className="services-group d-flex align-items-center">
+    <Container>
+      <h1 className="heading-secondary text-white">
         Services
       </h1>
       <div className="services">
@@ -20,6 +22,7 @@ const Services = () => (
         <p className="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, magnam quas. Corporis vel voluptatem excepturi maxime unde? Inventore, reprehenderit unde.</p>
         </div>
       </div>
+      </Container>
     </div>
   </div>
 );

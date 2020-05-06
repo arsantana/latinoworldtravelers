@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import logo from '../images/lwt-logo.png';
 
 const Footer = () => (
-  <div className="footer">
+  <footer className="footer page-footer">
     <div className="footer__logo-box">
       <img src={logo} alt="" className="footer__logo"/>
     </div>
@@ -24,7 +24,7 @@ const Footer = () => (
         <li className="footer__item">Item 3</li>
       </ul>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

@@ -4,11 +4,17 @@
   letter-spacing: 0.2rem;
   background-color: transparent;
   position: absolute;
-
+  padding: 2rem;
 }
 
 .navbar-toggler {
   height: 6rem;
   width: 6rem;
-  border: 1px solid #3bafe0;
+}
+
+a{
+  &:visited {
+    color: $color-grey-dark;
+  }
+  
 }

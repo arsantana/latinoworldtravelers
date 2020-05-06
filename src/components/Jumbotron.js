@@ -14,8 +14,20 @@ const Jumbo = (props) => {
       background-position: center;
       background-attachment: fixed;
     `}>
-      <Container>
-        <h1>{props.heading}</h1>
+      <Container css={css`
+      background: rgba(0, 0, 0, .5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      `
+    }>
+        <h1 css={css`
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: .2rem;
+        `}>{props.heading}</h1>
       </Container>
     </Jumbotron>
   )
