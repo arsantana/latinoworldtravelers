@@ -30,9 +30,11 @@ const Slider = props => {
   const { translate, transition, activeIndex, _slides } = state
 
   const autoPlayRef = useRef()
+  const transitionRef = useRef()
 
   useEffect(() => {
     autoPlayRef.current = nextSlide
+    transitionRef.current = smoothTransition
   })
 
   useEffect(() => {
@@ -40,11 +42,45 @@ const Slider = props => {
       autoPlayRef.current()
     }
 
-    if (props.autoPlay !== null) {
-      const interval = setInterval( play, props.autoPlay * 1000)
+    const smooth = (e) => {
+      if (e.target.className.includes('SliderContent')) {
+        transitionRef.current()
+      }
+    }
+
+    const transitionEnd = window.addEventListener('transitionend', smooth)
+
+    let interval = null
+
+    if (props.autoPlay) {
+      interval = setInterval( play, props.autoPlay * 1000)
       return () => clearInterval(interval)
     }
+    return () => {
+      window.removeEventListener('transitionend', transitionEnd)
+
+      if(props.autoPlay) {
+        clearInterval(interval)
+      }
+    }
   }, [props.autoPlay])
+
+const smoothTransition = () => {
+  let _slides = []
+
+  //We're at the last slide
+  if (activeIndex === slides.length - 1)
+    _slides = [slides[slides.length - 2 ], lastSlide, firstSlide ]
+    else if (activeIndex === 0 ) _slides = [lastSlide, firstSlide, secondSlide]
+    else _slides = slides.slice(activeIndex - 1, activeIndex + 2)
+
+    setState({
+      ...state, 
+      _slides,
+      transition: 0,
+      translate: getWidth()
+    })
+}
 
 const nextSlide = () => 
   setState({
