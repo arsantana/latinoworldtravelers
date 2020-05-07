@@ -6,12 +6,15 @@ import Slide from './Slide'
 import Arrow from './Arrow'
 import Dots from './Dots'
 
-const getWidth = () => window.innerWidth
+
 
 /**
  * @function Slider
  */
 const Slider = props => {
+
+  const getWidth = () => window.innerWidth
+
   const { slides } = props
 
   const firstSlide = slides[0]
@@ -145,7 +148,7 @@ const HeaderCSS = css`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .5);
   height: 100%;
   width: 100%;
 `
