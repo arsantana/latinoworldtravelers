@@ -5,15 +5,17 @@ import SliderContent from './SliderContent'
 import Slide from './Slide'
 import Arrow from './Arrow'
 import Dots from './Dots'
+import window from 'global/window';
 
 
+const getWidth = () => window.innerWidth
 
 /**
  * @function Slider
  */
 const Slider = props => {
 
-  const getWidth = () => window.innerWidth
+  
 
   const { slides } = props
 
