@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Card, Row, Col, Button } from 'react-bootstrap';
 import bali from '../images/bali.jpg';
+import TripCard from './TripCard';
 
 const Destinations = () => {
   return(
@@ -9,7 +10,32 @@ const Destinations = () => {
       <h2 className="heading-secondary heading-teal">
         Destinations
       </h2>
-      <Row className='mt-4'>
+      <Row>
+        <Col xs={12} sm={6} md={4}>
+          <TripCard />
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <TripCard />
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <TripCard />
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <TripCard />
+        </Col>
+      </Row>
+      <Row className='my-4 d-flex justify-content-center'>
+        <Button className='btn color-primary'>View More</Button>
+      </Row>
+      </Container>
+    </section>
+  )
+}
+
+export default Destinations;
+
+/**
+ * <Row className='mt-4'>
         <Col xs={12} sm={6} md={4}>
           <Card>
             <Card.Img src={bali} />
@@ -46,9 +72,4 @@ const Destinations = () => {
       <Row className='my-4 d-flex justify-content-center'>
         <Button className='btn color-primary'>View More</Button>
       </Row>
-      </Container>
-    </section>
-  )
-}
-
-export default Destinations;
+ */
