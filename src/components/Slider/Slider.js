@@ -12,7 +12,6 @@ const getWidth = () => window.innerWidth
  * @function Slider
  */
 const Slider = props => {
-
   const { slides } = props
 
   const firstSlide = slides[0]
@@ -31,10 +30,12 @@ const Slider = props => {
 
   const autoPlayRef = useRef()
   const transitionRef = useRef()
+  const resizeRef = useRef()
 
   useEffect(() => {
     autoPlayRef.current = nextSlide
     transitionRef.current = smoothTransition
+    resizeRef.current = handleResize
   })
 
   useEffect(() => {
@@ -48,22 +49,28 @@ const Slider = props => {
       }
     }
 
+    const resize = () => {
+      resizeRef.current()
+    }
+
+    const interval = setInterval(play, props.autoPlay * 1000)
     const transitionEnd = window.addEventListener('transitionend', smooth)
+    const onResize = window.addEventListener('resize', resize)
 
-    let interval = null
-
-    if (props.autoPlay) {
-      interval = setInterval( play, props.autoPlay * 1000)
-      return () => clearInterval(interval)
-    }
     return () => {
+      clearInterval(interval)
       window.removeEventListener('transitionend', transitionEnd)
-
-      if(props.autoPlay) {
-        clearInterval(interval)
-      }
+      window.removeEventListener('resize', onResize)
     }
-  }, [props.autoPlay])
+  }, [])
+
+  useEffect(() => {
+    if (transition === 0) setState({...state, transition: 0.45})
+  }, [transition])
+
+  const handleResize = () => {
+    setState({...state, translate: getWidth(), transition: 0})
+  }
 
 const smoothTransition = () => {
   let _slides = []
@@ -107,33 +114,29 @@ const prevSlide = () =>
         width={getWidth() * _slides.length}
       >
         {_slides.map((slide, i) => (
-          <Slide key={slide + i} content={slide} />
+          <Slide width={getWidth()} key={slide + i} content={slide} />
         ))}
       </SliderContent>
 
-      {!props.autoPlay && (
           <>
             <Arrow direction="left" handleClick={prevSlide} />
             <Arrow direction="right" handleClick={nextSlide} />
           </>
-        )}
+        
 
       <Dots slides={props.slides} activeIndex={activeIndex} />
     </div>
   )
 }
 
-Slider.defaultProps = {
-  slides: [],
-  autoPlay: null
-}
 
 const SliderCSS = css`
   position: relative;
   height: 100vh;
   width: 100vw;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
+  white-space: nowrap;
 `
 
 const HeaderCSS = css`

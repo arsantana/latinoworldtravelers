@@ -12,15 +12,16 @@ const Arrow = ({ direction, handleClick }) => (
       position: absolute;
       top: 50%;
       ${direction === 'right' ? `right: 25px` : `left: 25px`};
-      height: 35px;
-      width: 35px;
+      height: 50px;
+      width: 50px;
       justify-content: center;
       background: white;
       border-radius: 50%;
       cursor: pointer;
       align-items: center;
-      transition: all ease-in 0.3s;
+      transition: all ease-in 0.1s;
       opacity: .07;
+      z-index: 2000;
       &:hover {
         transform: scale(1.1);
         opacity: 1;
