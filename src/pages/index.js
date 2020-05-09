@@ -1,6 +1,7 @@
 import React from "react";
 import Header from '../components/Header/Header';
 import AboutSection from '../components/AboutSection';
+import GetInvolved from '../components/GetInvolved';
 import Destinations from '../components/Destinations';
 import Reviews from '../components/ReviewSection';
 import FeaturedPosts from '../components/FeaturedPosts';
@@ -14,6 +15,7 @@ const IndexPage = () => (
   <>
     <Header />
     <AboutSection />
+    <GetInvolved />
     <Destinations />
     <Reviews />
     <FeaturedPosts />
