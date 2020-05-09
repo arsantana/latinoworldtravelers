@@ -7,7 +7,7 @@ const Destinations = () => {
   return(
     <section className="destinations-section container text-align-center ">
       <Container>
-      <h2 className="heading-secondary heading-teal">
+      <h2 className="heading-secondary ">
         Destinations
       </h2>
       <Row>

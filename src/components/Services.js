@@ -5,7 +5,7 @@ const Services = () => (
   <div className="services-section">
     <div className="services-group d-flex align-items-center">
     <Container>
-      <h1 className="heading-secondary text-white">
+      <h1 className="heading-secondary ">
         Services
       </h1>
       <div className="services">

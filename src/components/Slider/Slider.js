@@ -15,8 +15,6 @@ const getWidth = () => window.innerWidth
  */
 const Slider = props => {
 
-  
-
   const { slides } = props
 
   const firstSlide = slides[0]
@@ -110,13 +108,7 @@ const prevSlide = () =>
   
   return (
     <div css={SliderCSS}>
-      <div css={HeaderCSS}>
-        <h1 css={HeadingCSS}>
-          <span>Dream.</span>
-          <span>Discover.</span>
-          <span>Inspire.</span>
-        </h1>
-      </div>
+      
       <SliderContent
         translate={translate}
         transition={transition}
@@ -148,35 +140,5 @@ const SliderCSS = css`
   white-space: nowrap;
 `
 
-const HeaderCSS = css`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  background: rgba(0, 0, 0, .5);
-  height: 100%;
-  width: 100%;
-`
-const HeadingCSS = css`
-display: flex;
-color: #fff;
-font-size: 4.5rem;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: .5rem;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
-@media (max-width: 420px) {
-  font-size: 3.6rem;
-  top: 40%;
-  flex-direction: column;
-  line-height: 5.7rem;
-  letter-spacing: .7rem;
-}
-`
 
 export default Slider

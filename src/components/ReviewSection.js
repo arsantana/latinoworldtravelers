@@ -12,7 +12,7 @@ const ReviewSection = () => {
       </div>
       <Container className="d-flex align-items-center">
       <div className="review ">
-        <h3 className="heading-secondary text-white">
+        <h3 className="heading-secondary heading-blue">
           Reviews
         </h3>
       <div>

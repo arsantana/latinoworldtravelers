@@ -8,7 +8,7 @@ const FeaturedPosts = () => {
   return(
     <section className="featuredposts-section container">
       <Container>
-      <h2 className="heading-secondary heading-teal">
+      <h2 className="heading-secondary">
         Travel Blog
       </h2>
       <Row>

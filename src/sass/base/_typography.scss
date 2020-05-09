@@ -5,11 +5,13 @@ body {
 }
 
 
-
 .heading-secondary {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
   letter-spacing: .5rem;
   padding: 1rem;
   margin-bottom: .5rem;
+  background-image: linear-gradient(to right, $primary-teal, $primary-blue);
+  -webkit-background-clip: text;
+  color: transparent;
 }

@@ -20,7 +20,7 @@ const Arrow = ({ direction, handleClick }) => (
       cursor: pointer;
       align-items: center;
       transition: all ease-in 0.1s;
-      opacity: .07;
+      opacity: .4;
       z-index: 2000;
       &:hover {
         transform: scale(1.1);
