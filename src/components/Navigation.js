@@ -7,7 +7,7 @@ import logo from '../images/logo-white.png';
 const Navigation = () => {
 
   return(
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top p-4 text-white">
+    <nav className="navbar navbar-dark navbar-expand-lg navbar-light bg-transparent fixed-top p-4 text-white">
   <Link to='/' className="navbar-brand">
     <img src={logo} alt='Logo' height="60" width='160' />
   </Link>

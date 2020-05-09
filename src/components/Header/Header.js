@@ -16,7 +16,12 @@ const Header = () => {
       <Navigation />
       <div css={HeaderCSS}>
         <div css={HeadingCSS}>
-          <div>
+          <div css={css`
+            @media (max-width: 420px) {
+              display: flex;
+              flex-direction: column;
+            }
+          `}>
             <span>Dream.</span>
             <span>Discover.</span>
             <span>Inspire.</span>
@@ -59,7 +64,7 @@ transform: translate(-50%, -50%);
 
 @media (max-width: 420px) {
   font-size: 3.6rem;
-  top: 40%;
+  top: 50%;
   flex-direction: column;
   line-height: 5.7rem;
   letter-spacing: .7rem;
@@ -73,6 +78,10 @@ const SubHeadingCSS = css`
   letter-spacing: .5rem;
   display: inline;
 
+  @media (max-width: 420px) {
+    margin-top: 2rem;
+    line-height: 2rem;
+  }
 `
 
 export default Header;

@@ -12,12 +12,14 @@
 .navbar-toggler {
   height: 6rem;
   width: 6rem;
-  color: white;
+  border: 5px;
 }
 
 .navbar-toggler-icon {
-  background-color: #fff;
+  border: 3px;
 }
+
+
 
 .nav-link {
   color: white !important;
