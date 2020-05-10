@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Card, Row, Col, Button } from 'react-bootstrap';
-import bali from '../images/bali.jpg';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import TripCard from './TripCard';
 
 const Destinations = () => {
@@ -11,9 +10,6 @@ const Destinations = () => {
         Destinations
       </h2>
       <Row>
-        <Col xs={12} sm={6} md={4}>
-          <TripCard />
-        </Col>
         <Col xs={12} sm={6} md={4}>
           <TripCard />
         </Col>

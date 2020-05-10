@@ -1,29 +1,28 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Review from './Reviews/Review';
+import { css } from '@emotion/core';
 import shore from '../images/shore.mp4'
 
 const ReviewSection = () => {
   return(
     <section className="review-section">
+      <div css={css`
+          background-color: rgba(0, 0, 0, .2);
+          width: 100%;
+        `}>
       <div className="bg-video">
         <video autoPlay loop muted playsInline>
           <source src={shore} type='video/mp4' />
         </video>
       </div>
-      <Container className="d-flex align-items-center">
-      <div className="review ">
-        <h3 className="heading-secondary heading-blue">
-          Reviews
-        </h3>
-      <div>
-        <p className="review__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam laboriosam nulla esse laborum, vel iste dolorem necessitatibus sapiente quisquam voluptate soluta quidem tempora enim! Quam odit quia laudantium nobis ad.
-        </p>
+      <div className="container d-flex flex-column align-items-center">
+        <h1 className="heading-secondary">We make people genuinely happy!</h1>
+        <Review />
       </div>
       </div>
-      </Container>
     </section>
   )
 }
 
 export default ReviewSection;
+

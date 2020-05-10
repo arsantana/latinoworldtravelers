@@ -34,7 +34,7 @@
 
 // Services section
 .services-section {
-  background: url("../images/plane.jpg");
+  background: url("../images/dest.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +42,7 @@
   text-align: center;
 
   .services-group {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
     height: 100%;
   }
 
@@ -61,7 +61,7 @@
     width: 30rem;
     padding: 2rem;
     margin: 1.5rem;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .8);
 
     @include respond(phone) {
       align-self: center;

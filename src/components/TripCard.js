@@ -5,7 +5,7 @@ const TripCard = () => {
   return(
     <div className="trip-card">
       <figure className='trip-fig'>
-        <img className='trip-img' src={bali} />
+        <img className='trip-img' src={bali} alt='bali' />
         <figcaption className='trip-card__caption'>Bali</figcaption>
       </figure>
       <div className="trip-card__details">

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef}  from 'react';
+import React from 'react';
 import {css} from '@emotion/core';
 import Navigation from '../Navigation';
 import Slider from '../Slider/Slider';

@@ -5,7 +5,7 @@ import girls from '../images/girls.jpg';
 import girl1 from '../images/girl1.jpg';
 import friends2 from '../images/friends2.jpg';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import { css, jsx } from '@emotion/core'
+import { css} from '@emotion/core'
 
 const AboutPage = () => {
   return(
