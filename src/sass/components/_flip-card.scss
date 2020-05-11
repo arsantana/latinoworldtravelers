@@ -30,13 +30,13 @@
 
     &--front {
       background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
     }
 
     &--back {
       transform: rotateY(-180deg);
       background-image: linear-gradient(to right bottom, $primary-blue, $primary-teal);
       padding: 2rem;
-      font-size: 1.4rem;
     }
   }
 
@@ -50,17 +50,25 @@
 
   //Front-Side Styling
 
+  &__icon {
+    font-size: 4rem;
+    background-image: linear-gradient(to right, $primary-teal, $primary-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   &__heading {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    letter-spacing: .2rem;
     text-transform: uppercase;
     text-align: center;
   }
 
   // Back-Side Styling 
   &__details {
-    font-size: 2.4rem;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    
   }
 }
 

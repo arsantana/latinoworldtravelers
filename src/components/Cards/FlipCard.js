@@ -2,7 +2,7 @@ import React from 'react';
 import {BsPersonSquare} from "react-icons/bs";
 
 const FlipCard = (props) => {
-  console.log(props);
+  
   return(
     <div className="flipcard">
       <div className="flipcard__side flipcard__side--front">
