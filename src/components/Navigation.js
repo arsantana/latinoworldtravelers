@@ -6,7 +6,7 @@ import window from 'global/window';
 
 const Navigation = () => {
 
-  const [navBackground, setNavBackground] = useState(navBackground);
+  const [navBackground, setNavBackground] = useState();
 
   const scrollEvent = e => {
     if (window.scrollY < 73) {
