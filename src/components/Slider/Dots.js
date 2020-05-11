@@ -11,7 +11,7 @@ const Dot = ({ active }) => (
       border-radius: 50%;
       opacity: .5;
       background: ${active ? 'black' : 'white'};
-      z-index: 2000;
+      z-index: 1000;
     `}
   />
 )

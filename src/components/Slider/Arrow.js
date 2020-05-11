@@ -21,7 +21,7 @@ const Arrow = ({ direction, handleClick }) => (
       align-items: center;
       transition: all ease-in 0.1s;
       opacity: .4;
-      z-index: 2000;
+      z-index: 1000;
       &:hover {
         transform: scale(1.1);
         opacity: 1;

@@ -28,3 +28,29 @@
 .nav-bg-scroll {
   background-color: $primary-blue;
 }
+
+.navBackground {
+  background-color: transparent;
+  transform: translateY(0);
+  transition: transform .6s ease;
+}
+
+.navBackground2 {
+  background-color: $primary-blue;
+  transform: translateY(10);
+  transition: transform .3s;
+  animation: changeBg 3s;
+  z-index: 2000;
+}
+
+@keyframes changeBg {
+  0% {
+    background-color: transparent;
+  }
+  35% {
+    background-color: $primary-blue;
+  }
+  100% {
+    background-color: $primary-blue;
+  }
+}
